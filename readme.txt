@@ -6,3 +6,6 @@ cnpm i webpack-cli -D
 
 css-loader 支持 import './style/index.css'; 
 style-loader 在main.js中生成style标签注入到index.html中
+
+lesson-04
+cnpm i autoprefixer -D  添加前缀

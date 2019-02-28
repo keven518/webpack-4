@@ -10,7 +10,30 @@ module.exports = {
     rules: [
       {
         test: /\.(sc|c|sa)ss$/,
-        use: ['style-loader', 'css-loader', 'sass-loader']
+        use: [
+          'style-loader', {
+            loader: 'css-loader', 
+            options: {
+              sourceMap: true
+            }
+          },
+          {
+            loader: 'postcss-loader',
+            options: {
+              ident: 'postcss',
+              sourceMap: true,
+              plugins: loader => [
+                require('autoprefixer')({ browsers: ['> 0.15% in CN'] }) // 添加前缀
+              ]
+            }
+          },
+          {
+            loader: 'sass-loader',
+            options: {
+              sourceMap: true
+            }
+          }
+        ]
       }
     ]
   }
