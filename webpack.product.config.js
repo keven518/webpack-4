@@ -1,7 +1,14 @@
 const path = require('path');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const devMode = process.env.NODE_ENV !== 'production'; // 判断当前环境是开发环境还是 部署环境，主要是 mode属性的设置值。
+
+console.log("process: ", process)
+console.log("process.env.NODE_ENV: ", process.env.NODE_ENV)
+console.log("devMode: ", devMode)
+
 module.exports = {
   entry: './src/index.js',
-  mode: 'development',
+  mode: 'production',
   output: {
     filename: 'main.js',
     path: path.resolve(__dirname, 'dist')
@@ -11,7 +18,7 @@ module.exports = {
       {
         test: /\.(sc|c|sa)ss$/,
         use: [
-          'style-loader', 
+          MiniCssExtractPlugin.loader,
           {
             loader: 'css-loader', 
             options: {
@@ -37,5 +44,11 @@ module.exports = {
         ]
       }
     ]
-  }
+  },
+  plugins: [
+    new MiniCssExtractPlugin({
+      filename: '[name].[hash].css', // 设置最终输出的文件名
+      chunkFilename: devMode ? '[id].css' : '[id].[hash].css'
+    })
+  ]
 }
