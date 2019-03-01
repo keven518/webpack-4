@@ -18,3 +18,9 @@ lesson-06 webpack的CSS和JS压缩插件使用
 cnpm i -D optimize-css-assets-webpack-plugin  css 压缩
 cnpm i -D uglifyjs-webpack-plugin  js 压缩
 https://malun666.github.io/aicoder_vip_doc/#/pages/vip_2webpack?id=%E5%8E%8B%E7%BC%A9-css
+
+lesson-07 webpack解决文件名带哈希值的问题
+https://malun666.github.io/aicoder_vip_doc/#/pages/vip_2webpack?id=%E8%A7%A3%E5%86%B3-css-%E6%96%87%E4%BB%B6%E6%88%96%E8%80%85-js-%E6%96%87%E4%BB%B6%E5%90%8D%E5%AD%97%E5%93%88%E5%B8%8C%E5%8F%98%E5%8C%96%E7%9A%84%E9%97%AE%E9%A2%98
+在css，js更新的时候浏览器有缓存所以如果同名的话就会做到无法即时更新，所以要带上哈希即版本的后缀
+HtmlWebpackPlugin插件，可以把打包后的 CSS 或者 JS 文件引用直接注入到 HTML 模板中，这样就不用每次手动修改文件引用了。
+cnpm i -D html-webpack-plugin
