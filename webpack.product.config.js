@@ -4,6 +4,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 // const devMode = process.env.NODE_ENV !== 'production'; // 判断当前环境是开发环境还是 部署环境，主要是 mode属性的设置值。
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 console.log("process: ", process)
 console.log("process.env.NODE_ENV: ", process.env.NODE_ENV)
@@ -14,7 +15,7 @@ module.exports = {
   mode: 'production',
   output: {
     filename: 'main.[hash].js',
-    path: path.resolve(__dirname, 'dist-1')
+    path: path.resolve(__dirname, 'dist')
   },
   module: {
     rules: [
@@ -49,6 +50,7 @@ module.exports = {
     ]
   },
   plugins: [
+    new CleanWebpackPlugin(['dist']),
     new MiniCssExtractPlugin({
       filename: '[name].[hash].css', // 设置最终输出的文件名
       chunkFilename: '[id].[hash].css'
