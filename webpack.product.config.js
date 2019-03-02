@@ -23,7 +23,7 @@ module.exports = {
         use: [
           MiniCssExtractPlugin.loader,
           {
-            loader: 'css-loader', 
+            loader: 'css-loader',
             options: {
               sourceMap: true
             }
@@ -45,6 +45,12 @@ module.exports = {
             }
           }
         ]
+      },
+      {
+        test: /\.(png|svg|jpg|gif)$/,
+        use: [
+          'file-loader'
+        ]
       }
     ]
   },
@@ -64,7 +70,7 @@ module.exports = {
       }
     })
   ],
-  optimization: {      
+  optimization: {
     minimizer: [
       new UglifyJsPlugin({
         cache: true,

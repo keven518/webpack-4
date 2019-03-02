@@ -24,3 +24,10 @@ https://malun666.github.io/aicoder_vip_doc/#/pages/vip_2webpack?id=%E8%A7%A3%E5%
 在css，js更新的时候浏览器有缓存所以如果同名的话就会做到无法即时更新，所以要带上哈希即版本的后缀
 HtmlWebpackPlugin插件，可以把打包后的 CSS 或者 JS 文件引用直接注入到 HTML 模板中，这样就不用每次手动修改文件引用了。
 cnpm i -D html-webpack-plugin
+
+lesson-08 webpack清理目录插件clean-webpack-plugin应用
+https://malun666.github.io/aicoder_vip_doc/#/pages/vip_2webpack?id=%E6%B8%85%E7%90%86-dist-%E7%9B%AE%E5%BD%95
+cnpm i clean-webpack-plugin -D
+
+lesson-09 webpack图片处理及优化
+file-loader处理文件的导入  cnpm i -D file-loader
