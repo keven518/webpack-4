@@ -4,5 +4,15 @@ $bgColor: #c09;
   background-color: $bgColor;
   font-size: 30px;
   display: flex;
-  background: url('../assets/img/back_identity.png')
+  background: url('../assets/img/1.jpg');
+  .cmm {
+    background: url('../assets/img/back_identity.png');
+    height: 200px;
+    width: 200px;
+  }
+  .cw {
+    background: url('../assets/img/checkbox／unselected／normal.png');
+    height: 20px;
+    width: 20px;
+  }
 }

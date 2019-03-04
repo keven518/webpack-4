@@ -31,3 +31,10 @@ cnpm i clean-webpack-plugin -D
 
 lesson-09 webpack图片处理及优化
 file-loader处理文件的导入  cnpm i -D file-loader
+image-webpack-loader可以帮助我们对图片进行压缩和优化。
+cnpm i image-webpack-loader -D
+
+lesson-10 - webpack图片base64优化和字体处理
+url-loader功能类似于 file-loader，可以把 url 地址对应的文件，打包成 base64 的 DataURL，减少http请求，提高访问的效率。
+适合非常小的图片，大的图片继续使用http请求,超过limit就会拷贝图片到输出目录里
+cnpm i -D url-loader
