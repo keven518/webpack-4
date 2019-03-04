@@ -10,6 +10,10 @@ function createDomElemete() {
   return dom;
 }
 
+console.log('111151888')
+
 var divDom = createDomElemete();
 
 document.body.appendChild(divDom);
+
+console.log('33335200000')

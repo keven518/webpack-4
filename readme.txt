@@ -42,3 +42,11 @@ cnpm i -D url-loader
 lesson-11 webpack的配置进行合并和提前公共配置
 webpack-merge 的工具可以实现两个配置文件进合并，这样我们就可以把 开发环境和生产环境的公共配置抽取到一个公共的配置文件中。
 cnpm i -D webpack-merge
+
+lesson-12 - webpack的启动监控自动编译和启用js的sourcemap
+使用 inline-source-map 选项，这有助于解释说明 js 原始出错的位置。（不要用于生产环境）;
+如果不使用js的sourcemap，js文件里将有冗余代码
+每次修改完毕后，都手动编译异常痛苦。最简单解决的办法就是启动watch。
+使用 webpack-dev-server 和热更新
+webpack-dev-server 为你提供了一个简单的 web 服务器，并且能够实时重新加载(live reloading)。
+cnpm i -D webpack-dev-server

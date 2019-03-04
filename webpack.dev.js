@@ -8,6 +8,10 @@ let devConfig = {
     filename: 'main.js',
     path: path.resolve(__dirname, 'dist')
   },
+  devtool: 'inline-source-map',   // 开发阶段开启sourcemap
+  devServer: {
+    contentBase: './dist'
+  },
   module: {
     rules: [
       {
