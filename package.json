@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack",
-    "dist": "webpack --config webpack.product.config.js"
+    "build": "webpack --config webpack.dev.js",
+    "dist": "webpack --config webpack.prod.js"
   },
   "keywords": [],
   "author": "",
@@ -27,7 +27,8 @@
     "uglifyjs-webpack-plugin": "^2.1.2",
     "url-loader": "^1.1.2",
     "webpack": "^4.29.5",
-    "webpack-cli": "^3.2.3"
+    "webpack-cli": "^3.2.3",
+    "webpack-merge": "^4.2.1"
   },
   "dependencies": {
     "lodash": "^4.17.11"

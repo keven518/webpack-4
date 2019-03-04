@@ -1,6 +1,8 @@
 const path = require('path');
-module.exports = {
-  entry: './src/index.js',
+const merge = require('webpack-merge');
+const common = require('./webpack.common');
+
+let devConfig = {
   mode: 'development',
   output: {
     filename: 'main.js',
@@ -11,9 +13,9 @@ module.exports = {
       {
         test: /\.(sc|c|sa)ss$/,
         use: [
-          'style-loader', 
+          'style-loader',
           {
-            loader: 'css-loader', 
+            loader: 'css-loader',
             options: {
               sourceMap: true
             }
@@ -39,3 +41,5 @@ module.exports = {
     ]
   }
 }
+
+module.exports = merge(common, devConfig);

@@ -12,41 +12,8 @@ console.log("process.env.NODE_ENV: ", process.env.NODE_ENV)
 
 module.exports = {
   entry: './src/index.js',
-  mode: 'production',
-  output: {
-    filename: 'main.[hash].js',
-    path: path.resolve(__dirname, 'dist')
-  },
   module: {
     rules: [
-      {
-        test: /\.(sc|c|sa)ss$/,
-        use: [
-          MiniCssExtractPlugin.loader,
-          {
-            loader: 'css-loader',
-            options: {
-              sourceMap: true
-            }
-          },
-          {
-            loader: 'postcss-loader',
-            options: {
-              ident: 'postcss',
-              sourceMap: true,
-              plugins: loader => [
-                require('autoprefixer')({ browsers: ['> 0.15% in CN'] }) // 添加前缀
-              ]
-            }
-          },
-          {
-            loader: 'sass-loader',
-            options: {
-              sourceMap: true
-            }
-          }
-        ]
-      },
       {
         test: /\.(png|svg|jpg|gif)$/,
         use: [
@@ -83,11 +50,6 @@ module.exports = {
     ]
   },
   plugins: [
-    new CleanWebpackPlugin(['dist']),
-    new MiniCssExtractPlugin({
-      filename: '[name].[hash].css', // 设置最终输出的文件名
-      chunkFilename: '[id].[hash].css'
-    }),
     new HtmlWebpackPlugin({
       title: '柯文 万岁', // 默认值：Webpack App
       filename: 'main.html', // 默认值： 'index.html'
@@ -97,16 +59,7 @@ module.exports = {
         removeComments: true,       // 是否移除注释
         removeAttributeQuotes: true // 移除属性的双引号
       }
-    })
-  ],
-  optimization: {
-    minimizer: [
-      new UglifyJsPlugin({
-        cache: true,
-        parallel: true,
-        sourceMap: true // set to true if you want JS source maps
-      }),
-      new OptimizeCSSAssetsPlugin({})
-    ]
-  }
+    }),
+    new CleanWebpackPlugin(['dist'])
+  ]
 }

@@ -38,3 +38,7 @@ lesson-10 - webpack图片base64优化和字体处理
 url-loader功能类似于 file-loader，可以把 url 地址对应的文件，打包成 base64 的 DataURL，减少http请求，提高访问的效率。
 适合非常小的图片，大的图片继续使用http请求,超过limit就会拷贝图片到输出目录里
 cnpm i -D url-loader
+
+lesson-11 webpack的配置进行合并和提前公共配置
+webpack-merge 的工具可以实现两个配置文件进合并，这样我们就可以把 开发环境和生产环境的公共配置抽取到一个公共的配置文件中。
+cnpm i -D webpack-merge
