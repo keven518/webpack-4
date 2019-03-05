@@ -16,4 +16,4 @@ var divDom = createDomElemete();
 
 document.body.appendChild(divDom);
 
-console.log('33335200000')
+console.log('339988')

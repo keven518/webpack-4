@@ -6,8 +6,8 @@ const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 
-console.log("process: ", process)
-console.log("process.env.NODE_ENV: ", process.env.NODE_ENV)
+// console.log("process: ", process)
+// console.log("process.env.NODE_ENV: ", process.env.NODE_ENV)
 // console.log("devMode: ", devMode)
 
 module.exports = {
@@ -52,7 +52,7 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       title: '柯文 万岁', // 默认值：Webpack App
-      filename: 'main.html', // 默认值： 'index.html'
+      filename: 'index.html', // 默认值： 'index.html'
       template: path.resolve(__dirname, 'src/index.html'),
       minify: {
         // collapseWhitespace: true,   // 是否压缩, 是否把空白去掉
