@@ -50,3 +50,8 @@ lesson-12 - webpack的启动监控自动编译和启用js的sourcemap
 使用 webpack-dev-server 和热更新
 webpack-dev-server 为你提供了一个简单的 web 服务器，并且能够实时重新加载(live reloading)。
 cnpm i -D webpack-dev-server
+lesson-13 - webpack的启动热更新和代理配置
+lesson-14 - webpack的代理服务器设置和bable转换及优化
+cnpm i -D babel-loader babel-core babel-preset-env (弃用)
+https://www.jianshu.com/p/e21d19875fbb
+
