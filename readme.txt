@@ -55,3 +55,7 @@ lesson-14 - webpack的代理服务器设置和bable转换及优化
 cnpm i -D babel-loader babel-core babel-preset-env (弃用)
 https://www.jianshu.com/p/e21d19875fbb
 
+lesson-15 - webpack的eslint校验配置
+cnpm i eslint -D
+cnpm i eslint-loader -D
+

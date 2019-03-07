@@ -1,5 +1,5 @@
 import _ from 'lodash';
-import './style/index.css';  // loader=> css-loader module, style-loader
+import './style/index.css'; // loader=> css-loader module, style-loader
 import './style/a.scss';
 import axios from 'axios';
 
@@ -11,17 +11,17 @@ function createDomElemete() {
   return dom;
 }
 
-console.log('111151888')
+console.log('111151888');
 
 var divDom = createDomElemete();
 
 document.body.appendChild(divDom);
 
-console.log('33335200000')
+console.log('33335200000');
 
 class Demo {
   show() {
-    console.log('name: ', this.Name)
+    console.log('name: ', this.Name);
   }
 
   get Name() {
@@ -29,18 +29,18 @@ class Demo {
   }
 
   set Name(v) {
-    this._name = `${v}万岁wswws`
+    this._name = `${v}万岁wswws`;
   }
 }
 
-let d = new Demo()
+let d = new Demo();
 d.Name = '柯文';
-d.show()
+d.show();
 
 let [a, b, c] = [1, 2, 3];
-console.log('a: ', a)
-console.log('b: ', b)
-console.log('c: ', c)
+console.log('a: ', a);
+console.log('b: ', b);
+console.log('c: ', c);
 
 // 发送ajax请求数据
-axios.get('/api/getNewsCategory').then(res=> console.log('res: ', res))
+axios.get('/api/getNewsCategory').then(res => console.log('res: ', res));

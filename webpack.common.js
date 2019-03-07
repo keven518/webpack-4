@@ -17,10 +17,19 @@ module.exports = {
       {
         test: /\.js$/,
         exclude: /(node_modules)/,  // 加快编译速度，不包含node_modules文件夹内容
-        use: {
-          loader: 'babel-loader'
+        use: [{
+          loader: 'babel-loader',
+          options: {
+            cacheDirectory: true
+          }
+        }, {
+          loader: "eslint-loader",
+          options: {
+          // eslint options (if necessary)
+          fix: true
+          }
         }
-      },
+      ]},
       {
         test: /\.(png|svg|jpg|gif)$/,
         use: [
