@@ -59,3 +59,5 @@ lesson-15 - webpack的eslint校验配置
 cnpm i eslint -D
 cnpm i eslint-loader -D
 
+lesson-16 - webpack的模块解析后缀和别名配置详解
+

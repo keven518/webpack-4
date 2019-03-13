@@ -3,6 +3,10 @@ import './style/index.css'; // loader=> css-loader module, style-loader
 import './style/a.scss';
 import axios from 'axios';
 
+import { e, f, j } from './b';
+
+import $ from 'jquery';
+
 function createDomElemete() {
   var dom = document.createElement('div');
   dom.innerHTML = _.join(['aicoder.com', ' 好! ', '线下实习'], '');
@@ -42,5 +46,16 @@ console.log('a: ', a);
 console.log('b: ', b);
 console.log('c: ', c);
 
+console.log('e: ', e);
+console.log('f: ', f);
+console.log('j: ', j);
+
 // 发送ajax请求数据
 axios.get('/api/getNewsCategory').then(res => console.log('res: ', res));
+
+$(() => {
+  console.log('jquery');
+  $('.box').click(() => {
+    alert(1);
+  });
+});

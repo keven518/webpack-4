@@ -12,11 +12,20 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = {
   entry: './src/index.js',
+  resolve: {
+    alias: {   
+      '@': path.resolve(__dirname, 'src/')
+    },
+    extensions: [".js", ".vue",".json"]   // 默认值: [".js",".json"]   
+  },
+  externals: {    // 把一个模块做成外部依赖，不会打包到js中
+    jquery: 'jQuery'
+  },
   module: {
     rules: [
       {
         test: /\.js$/,
-        exclude: /(node_modules)/,  // 加快编译速度，不包含node_modules文件夹内容
+        exclude: /(node_modules)/,  //  加快编译速度，不包含node_modules文件夹内容
         use: [{
           loader: 'babel-loader',
           options: {
@@ -71,7 +80,7 @@ module.exports = {
       filename: 'index.html', // 默认值： 'index.html'
       template: path.resolve(__dirname, 'src/index.html'),
       minify: {
-        // collapseWhitespace: true,   // 是否压缩, 是否把空白去掉
+        collapseWhitespace: true,   // 是否压缩, 是否把空白去掉
         removeComments: true,       // 是否移除注释
         removeAttributeQuotes: true // 移除属性的双引号
       }
