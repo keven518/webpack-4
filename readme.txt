@@ -61,3 +61,6 @@ cnpm i eslint-loader -D
 
 lesson-16 - webpack的模块解析后缀和别名配置详解
 
+lesson-18 - webpack的打包分析报表插件与优化总结
+安装：cnpm i -D webpack-bundle-analyzer
+

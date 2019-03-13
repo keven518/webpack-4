@@ -19,7 +19,8 @@ module.exports = {
     extensions: [".js", ".vue",".json"]   // 默认值: [".js",".json"]   
   },
   externals: {    // 把一个模块做成外部依赖，不会打包到js中
-    jquery: 'jQuery'
+    jquery: 'jQuery',
+    lodash: '_'
   },
   module: {
     rules: [
